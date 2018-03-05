@@ -33,6 +33,10 @@ class HomeController extends Controller
             $users = $users->where('id', $request->get('user_id', 0));
         }
 
+        if ($request->get('email', 0)) {
+            $users = $users->where('email', $request->get('email', 0));
+        }
+
         if ($request->input('export') == 1) {
             return (new \App\Services\ExportService())->handle($users, 'exportUsers');
         }

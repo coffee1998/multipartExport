@@ -20,7 +20,9 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 用户ID <input type="text" class="form-control" name="user_id" value="{{ request('user_id') }}" placeholder="用户ID">
-                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp;
+                                邮箱 <input type="text" class="form-control" name="email" value="{{ request('email') }}" placeholder="邮箱">
+                                &nbsp; &nbsp;
                                 <button type="submit" class="btn btn-primary btn-sm">查 询</button>
                                 <label class="pull-right"><a href="javascript:;" class="btn btn-primary" data-plugin="exprot-file" data-export-form="form2" data-export-url="{{ route('home') }}">导出Excel</a>&nbsp;&nbsp;&nbsp;&nbsp;</label>
                             </div>
