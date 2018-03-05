@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/goods-store', 'HomeController@goodsNumberQueue')->name('goods-store');
 
 Route::get('/order', 'HomeController@panicBuy')->name('order');
+
+Route::get('/download_execute', 'HomeController@downloadExportCsv')->name('download_execute');

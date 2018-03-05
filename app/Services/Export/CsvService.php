@@ -63,7 +63,13 @@ class CsvService
      */
     protected function setFilePath()
     {
-        $this->filePath = storage_path() . '/exports/' . $this->fileName . '.csv';
+        $path = storage_path() . '/exports/';
+
+        if (!file_exists($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $this->filePath = $path . $this->fileName . '.csv';
     }
 
     /**

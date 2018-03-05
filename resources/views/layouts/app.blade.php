@@ -16,7 +16,8 @@
     <link href="/css/components.css" rel="stylesheet">
     <link href="/css/daterangepicker.min.css" rel="stylesheet">
 
-    <script src="https://cdn.bootcss.com/jquery/1.8.0/jquery-1.8.0.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/js/moment.min.js?v=1.1.1"></script>
     <script src="/js/daterangepicker.min.js"></script>
 </head>

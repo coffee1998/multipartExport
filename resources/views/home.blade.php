@@ -45,7 +45,7 @@
                         @endforeach
                     </table>
                     <div class="pagination" style="margin-left:10px;">
-                        {!!$users->appends(Request::except('page'))->render()!!}
+                        {!!$users->appends(request()->except('page'))->links()!!}
                     </div>
                     <label class="pull-right" style="padding:40px 40px 0;">Total:{{$users->toTal()}}&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 </div>

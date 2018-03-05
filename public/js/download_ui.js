@@ -83,7 +83,7 @@ $.fn.ready(function() {
     }
 
     var download_execute = function(fileName) {
-        window.location.href = '/internal/api/download_execute?export_name=' + fileName;
+        window.location.href = '/download_execute?export_name=' + fileName;
     }
 
     $("[data-plugin=exprot-file]").on('click', download_init);
