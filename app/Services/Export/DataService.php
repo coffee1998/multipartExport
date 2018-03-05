@@ -50,9 +50,9 @@ class DataService
     public $completeSize = 0;
 
     /**
-     * 资源复购（咨询师为主）
-     * @author liang <liangcb@huazhen.com>
-     * @date 2018-01-15
+     * 导出用户信息
+     * @author nicoke
+     * @date 2018-02-01
      */
     public function exportUsers($model, $exportService)
     {

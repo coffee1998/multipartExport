@@ -26,10 +26,9 @@ class CsvService
 
     /**
      * set export file name
-     * @author cloty
-     * @datetime 2017-10-17T10:32:34+080
-     * @version  1.0
-     * @param    string $fileName
+     * @param string $fileName
+     * @author nicoke
+     * @date 2018-02-01
      */
     public function setFileName($fileName = '')
     {
@@ -44,9 +43,8 @@ class CsvService
 
     /**
      * get the file name
-     * @author cloty
-     * @datetime 2017-10-17T10:43:23+080
-     * @version  1.0
+     * @author nicoke
+     * @date 2018-02-01
      * @return  string
      */
     public function getFileName()
@@ -56,9 +54,8 @@ class CsvService
 
     /**
      * set the file path. default: storage folder
-     * @author cloty
-     * @datetime 2017-10-17T10:43:46+080
-     * @version  1.0
+     * @author nicoke
+     * @date 2018-02-01
      * @return   string
      */
     protected function setFilePath()
@@ -74,10 +71,9 @@ class CsvService
 
     /**
      * get the file path
-     * @author cloty
-     * @datetime 2017-10-17T10:45:49+080
-     * @version  1.0
-     * @return   string
+     * @author nicoke
+     * @date 2018-02-01
+     * @return string
      */
     public function getFilePath()
     {
@@ -86,11 +82,10 @@ class CsvService
 
     /**
      * Determine if the file exists
-     * @author cloty
-     * @datetime 2017-10-16T18:49:10+080
-     * @version  1.0
-     * @param    string $filePath
-     * @return   boolean
+     * @param string $filePath
+     * @author nicoke
+     * @date 2018-02-01
+     * @return boolean
      */
     public function fileExist($filePath = '')
     {
@@ -103,11 +98,10 @@ class CsvService
 
     /**
      * download file
-     * @author cloty
-     * @datetime 2017-10-17T11:38:15+080
-     * @version  1.0
-     * @param    string $filePath
-     * @return   \Illuminate\Http\Response
+     * @param string $filePath
+     * @author nicoke
+     * @date 2018-02-01
+     * @return \Illuminate\Http\Response
      */
     public function download($filePath = '')
     {
@@ -120,9 +114,8 @@ class CsvService
 
     /**
      * unlink file
-     * @author cloty
-     * @datetime 2017-10-17T11:00:26+080
-     * @version  1.0
+     * @author nicoke
+     * @date 2018-02-01
      * @return   boolean
      */
     public function unLinkFile()
@@ -136,10 +129,9 @@ class CsvService
 
     /**
      * write a row of data
-     * @author cloty
-     * @datetime 2017-10-17T11:02:25+080
-     * @version  1.0
-     * @param    array
+     * @param array
+     * @author nicoke
+     * @date 2018-02-01
      */
     public function addRow(array $data)
     {
@@ -160,9 +152,8 @@ class CsvService
 
     /**
      * Returns a file pointer resource on success, or FALSE on error.
-     * @author cloty
-     * @datetime 2017-10-17T11:08:49+080
-     * @version  1.0
+     * @author nicoke
+     * @date 2018-02-01
      * @return pointer|boolean
      */
     public function injectFile()
@@ -178,11 +169,10 @@ class CsvService
 
     /**
      * charset GBK
-     * @author cloty
-     * @datetime 2017-10-17T11:17:17+080
-     * @version  1.0
-     * @param    string $value
-     * @return   string
+     * @param string $value
+     * @author nicoke
+     * @date 2018-02-01
+     * @return string
      */
     public function charSetToGBK($value)
     {
