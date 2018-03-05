@@ -29,6 +29,10 @@ class HomeController extends Controller
     {
         $users = \App\User::latest('created_at');
 
+        if ($request->get('user_id', 0)) {
+            $users = $users->where('id', $request->get('user_id', 0));
+        }
+
         if ($request->input('export') == 1) {
             return (new \App\Services\ExportService())->handle($users, 'exportUsers');
         }

@@ -15,14 +15,18 @@
                     @endif
 
                     {{--You are logged in!--}}
-
+                    <div class="dataTables_wrapper form-inline dt-bootstrap">
                     <form method="get" id="form2">
                         <div class="row">
                             <div class="col-xs-12">
+                                用户ID <input type="text" class="form-control" name="user_id" value="{{ request('user_id') }}" placeholder="用户ID">
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                <button type="submit" class="btn btn-primary btn-sm">查 询</button>
                                 <label class="pull-right"><a href="javascript:;" class="btn btn-primary" data-plugin="exprot-file" data-export-form="form2" data-export-url="{{ route('home') }}">导出Excel</a>&nbsp;&nbsp;&nbsp;&nbsp;</label>
                             </div>
                         </div>
                     </form>
+                    </div>
 
                     @if (session('msg'))
                         <div class="alert alert-success">
