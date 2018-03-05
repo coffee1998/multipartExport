@@ -12,6 +12,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/components.css" rel="stylesheet">
+    <link href="/css/daterangepicker.min.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcss.com/jquery/1.8.0/jquery-1.8.0.js"></script>
+    <script src="/js/moment.min.js?v=1.1.1"></script>
+    <script src="/js/daterangepicker.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -72,6 +79,8 @@
         </nav>
 
         @yield('content')
+
+        @yield('layout-script')
     </div>
 
     <!-- Scripts -->

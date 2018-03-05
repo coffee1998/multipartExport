@@ -31,16 +31,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = \App\User::latest('created_at');
 
-        $orders = Redis::hgetall($this->user_queue_key);
-
-        foreach ($orders as $key => $order) {
-            $orders[$key] = unserialize($order);
+        if ($request->input('export') == 1) {
+            return (new \App\Services\ExportService())->handle($users, 'exportUsers');
         }
 
-        return view('home', compact('orders'));
+        $users = $users->paginate();
+
+        return view('home', compact('users'));
     }
 
     /**
