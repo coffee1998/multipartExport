@@ -19,7 +19,7 @@
                     <form method="get" id="form2">
                         <div class="row">
                             <div class="col-xs-12">
-                                <label class="pull-right"><a href="javascript:;" data-plugin="exprot-file" data-export-form="form2" data-export-url="{{ route('home') }}">导出Excel</a>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label class="pull-right"><a href="javascript:;" class="btn btn-primary" data-plugin="exprot-file" data-export-form="form2" data-export-url="{{ route('home') }}">导出Excel</a>&nbsp;&nbsp;&nbsp;&nbsp;</label>
                             </div>
                         </div>
                     </form>
