@@ -14,13 +14,12 @@ class ExportService extends Builder
 {
     /**
      * 执行导出作业
-     * @author cloty
-     * @datetime 2017-10-20T15:53:16+080
-     * @version  1.0
-     * @param    \Illuminate\Eloquent\Model $model
-     * @param    string $method
-     * @param    boolean $hasGroupBy
-     * @return   boolean
+     * @param \Illuminate\Eloquent\Model $model
+     * @param string $method
+     * @param boolean $hasGroupBy
+     * @author nicoke
+     * @date 2018-02-01
+     * @return boolean
      */
     public function handle($model, $method = '', $hasGroupBy = false)
     {
@@ -61,9 +60,9 @@ class ExportService extends Builder
 
     /**
      * initialize data
-     * @author cloty
-     * @datetime 2017-10-17T13:42:37+080
-     * @version  1.0
+     * @param $fileName string 文件名
+     * @author nicoke
+     * @date 2018-02-01
      * @return   [type] [description]
      */
     public function initializeData($fileName = '')
@@ -85,12 +84,11 @@ class ExportService extends Builder
 
     /**
      * 执行导出任务 TODO:使用队列，现在的方式不安全
-     * @author cloty
-     * @datetime 2017-10-17T14:16:18+080
-     * @version  1.0
-     * @param    \Illuminate\Eloquent\Model $model
-     * @param    array $initData
-     * @param    string $method
+     * @param \Illuminate\Eloquent\Model $model
+     * @param array $initData
+     * @param string $method
+     * @author nicoke
+     * @date 2018-02-01
      */
     public function startJob($model, $initData, $method)
     {
@@ -101,11 +99,10 @@ class ExportService extends Builder
 
     /**
      * 执行导出完成任务
-     * @author cloty
-     * @datetime 2017-10-17T14:19:27+080
-     * @version  1.0
-     * @param    string $url
-     * @param    int $code
+     * @param string $url
+     * @param int $code
+     * @author nicoke
+     * @date 2018-02-01
      * @return   return
      */
     public function finishJob($url, $code = 200)
@@ -136,10 +133,9 @@ class ExportService extends Builder
 
     /**
      * 更新完成进度
-     * @author cloty
-     * @datetime 2017-10-20T15:36:53+080
-     * @version  1.0
      * @param    string $fileName
+     * @author nicoke
+     * @date 2018-02-01
      */
     public function completeProcess()
     {
@@ -164,9 +160,8 @@ class ExportService extends Builder
 
     /**
      * 获取当前缓存进度
-     * @author cloty
-     * @datetime 2017-10-20T15:58:09+080
-     * @version  1.0
+     * @author nicoke
+     * @date 2018-02-01
      * @return   int
      */
     public function getCompleteProcess()
@@ -176,9 +171,8 @@ class ExportService extends Builder
 
     /**
      * 清除已完成任务
-     * @author cloty
-     * @datetime 2017-10-20T15:58:57+080
-     * @version  1.0
+     * @author nicoke
+     * @date 2018-02-01
      * @return   [type] [description]
      */
     public function clearCacheProcess()
@@ -194,9 +188,8 @@ class ExportService extends Builder
 
     /**
      * 缓存有效时间
-     * @author cloty
-     * @datetime 2017-10-20T15:46:50+080
-     * @version  1.0
+     * @author nicoke
+     * @date 2018-02-01
      * @return   [type] [description]
      */
     public function cacheTimeOut()
@@ -206,10 +199,9 @@ class ExportService extends Builder
 
     /**
      * init limit & skip the model
-     * @author cloty
-     * @datetime 2017-10-17T16:53:32+080
-     * @version  1.0
-     * @param    \Illuminate\Eloquent\Model $model
+     * @param \Illuminate\Eloquent\Model $model
+     * @author nicoke
+     * @date 2018-02-01
      * @return   \Illuminate\Eloquent\Model
      */
     public function initLimitModel($model)
@@ -229,11 +221,10 @@ class ExportService extends Builder
 
     /**
      * 计算总分页数
-     * @author cloty
-     * @datetime 2017-10-17T17:04:33+080
-     * @version  1.0
-     * @param    \Illuminate\Eloquent\Model|array $model
-     * @return   int
+     * @param \Illuminate\Eloquent\Model|array $model
+     * @author nicoke
+     * @date 2018-02-01
+     * @return int
      */
     public function calCountPage($model, $hasGroupBy = false)
     {
@@ -256,10 +247,9 @@ class ExportService extends Builder
 
     /**
      * md5Sign
-     * @author cloty
-     * @datetime 2017-10-23T13:50:17+080
-     * @version  1.0
      * @param    int $page
+     * @author nicoke
+     * @date 2018-02-01
      * @return   string
      */
     public function md5Sign($page)
