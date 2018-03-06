@@ -29,15 +29,20 @@ class HomeController extends Controller
     {
         $users = \App\User::latest('created_at');
 
-        if ($request->get('user_id', 0)) {
-            $users = $users->where('id', $request->get('user_id', 0));
+        // 这种写法也可以
+        //$users->when($request->user_id, function ($query) use ($request) {
+        //    return $query->whereId($request->user_id);
+        //});
+
+        if ($request->user_id) {
+            $users->whereId($request->user_id);
         }
 
-        if ($request->get('email', 0)) {
-            $users = $users->where('email', $request->get('email', 0));
+        if ($request->email) {
+            $users->whereEmail($request->email);
         }
 
-        if ($request->input('export') == 1) {
+        if ($request->export == 1) {
             return (new \App\Services\ExportService())->handle($users, 'exportUsers');
         }
 
