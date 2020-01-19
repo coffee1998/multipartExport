@@ -1,5 +1,7 @@
 # multipartExport
-项目名称：分片导出数据到csv
+项目名称：分片导出数据到csv  
+废话不多说，先来看一下效果：  
+![image](https://github.com/coffee1998/images/blob/master/export.gif)
 #### 安装教程
 1.克隆资源库
 ```shell
