@@ -31,5 +31,5 @@ php artisan db:seed
 ![image](https://github.com/coffee1998/images/blob/master/WechatIMG214.jpeg)
 
 如果群失效的可以加我微信（shxzs-888），然后入群  
-![image](/Users/chicv/Downloads/WechatIMG195.jpeg)
+![image](https://github.com/coffee1998/images/blob/master/WechatIMG195.jpeg)
 
